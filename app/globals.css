@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050a15;
+  --foreground: #e8edf5;
+  --muted: #9aa6b8;
+  --card: #0c1424;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --accent: #3b9eff;
+  --accent-end: #7ec8a3;
+  --navy: #07101f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-accent: var(--accent);
+  --color-accent-end: var(--accent-end);
+  --color-navy: var(--navy);
+  --font-sans: var(--font-jakarta);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
+
+.btn-gradient {
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-end) 100%);
+  color: #04101c;
+  font-weight: 600;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.btn-gradient:hover {
+  filter: brightness(1.08);
+}
+.hero-topo {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600' fill='none'%3E%3Cpath d='M-20 120C80 80 160 160 260 140C360 120 420 40 520 60C620 80 700 140 820 100' stroke='%233b9eff' stroke-opacity='0.18' stroke-width='1'/%3E%3Cpath d='M-20 180C100 140 180 220 280 200C380 180 440 100 540 120C640 140 720 200 820 160' stroke='%233b9eff' stroke-opacity='0.14' stroke-width='1'/%3E%3Cpath d='M-20 250C120 210 200 290 300 270C400 250 460 170 560 190C660 210 740 270 820 230' stroke='%233b9eff' stroke-opacity='0.12' stroke-width='1'/%3E%3Cpath d='M-20 320C90 280 190 360 290 340C390 320 470 240 570 260C670 280 740 340 820 300' stroke='%233b9eff' stroke-opacity='0.1' stroke-width='1'/%3E%3Cpath d='M-20 390C110 350 200 430 300 410C400 390 480 310 580 330C680 350 750 410 820 370' stroke='%233b9eff' stroke-opacity='0.08' stroke-width='1'/%3E%3Cpath d='M-20 460C130 420 220 500 320 480C420 460 500 380 600 400C700 420 760 480 820 440' stroke='%233b9eff' stroke-opacity='0.06' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+}
+

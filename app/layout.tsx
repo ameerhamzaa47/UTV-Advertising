@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
+import { PageLoader } from "@/components/layout/page-loader";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
   title: "UTV Advertising",
-  description: "UTV Advertising",
+  description:
+    "Performance marketing, SEO, paid media and conversion optimization built around measurable business growth.",
   icons: {
     icon: "/Image/favicon.png",
   },
@@ -22,11 +20,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${jakarta.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col font-sans">
+        <PageLoader />
+        {children}
+      </body>
     </html>
   );
 }
