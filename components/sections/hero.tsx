@@ -24,10 +24,10 @@ export function Hero() {
             built around measurable business growth.
           </p>
 
-          <div className="mt-7 flex flex-wrap items-center gap-3">
+          <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               href="/contact"
-              className="btn-gradient inline-flex items-center gap-2.5 rounded-full px-6 py-3.5 text-sm sm:text-[15px]"
+              className="btn-gradient inline-flex w-full items-center justify-center gap-2.5 rounded-full px-6 py-3.5 text-sm sm:w-auto sm:text-[15px]"
             >
               Get Your Free Call Audit
               <span className="flex size-6 items-center justify-center rounded-full bg-white/25">
@@ -37,7 +37,7 @@ export function Hero() {
 
             <Link
               href="/work"
-              className="inline-flex items-center rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-white/50 hover:bg-white/5 sm:text-[15px]"
+              className="inline-flex w-full items-center justify-center rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-white/50 hover:bg-white/5 sm:w-auto sm:text-[15px]"
             >
               View Our Work
             </Link>
