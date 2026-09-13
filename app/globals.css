@@ -2,6 +2,7 @@
 
 :root {
   --background: #050a15;
+  --secondary: #0D2244;
   --foreground: #e8edf5;
   --muted: #9aa6b8;
   --card: #0c1424;
@@ -13,6 +14,7 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-secondary: var(--secondary);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-card: var(--card);
