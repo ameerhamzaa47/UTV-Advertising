@@ -34,7 +34,7 @@ export function Header() {
             : "border-transparent bg-transparent",
         )}
       >
-        <div className="flex max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8 lg:px-16">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8 lg:px-16">
           <Link
             href="/"
             className="relative block h-9 w-[120px] shrink-0 sm:h-10 sm:w-[180px]"
@@ -126,8 +126,10 @@ export function Header() {
             id="mobile-nav"
             className="border-t border-white/10 px-5 py-4 lg:hidden"
           >
-            <nav className="mx-auto flex max-w-7xl flex-col gap-1" aria-label="Mobile">
-              {siteConfig.nav.map((item) => {
+            <nav
+              className="mx-auto flex w-full max-w-7xl flex-col gap-1 md:px-3 lg:px-11"
+              aria-label="Mobile"
+            >              {siteConfig.nav.map((item) => {
                 const active =
                   pathname === item.href || pathname.startsWith(`${item.href}/`);
 
