@@ -8,6 +8,19 @@ export type Service = {
   title: string;
   description: string;
   slug: string;
+  tags: string[];
+  icon: string;
+};
+
+export type CaseStudy = {
+  id: string;
+  category: string;
+  client: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  tone: "accent" | "accent-end";
+  slug: string;
 };
 
 export type WorkItem = {
