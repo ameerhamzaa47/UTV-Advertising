@@ -8,6 +8,8 @@ export type Service = {
   title: string;
   description: string;
   slug: string;
+  tags: string[];
+  icon: string;
 };
 
 export type WorkItem = {
