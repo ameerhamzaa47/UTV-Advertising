@@ -1,5 +1,6 @@
+import { Growth } from "@/components/sections/growth";
 import { Hero } from "@/components/sections/hero";
-import { PerformanceServices } from "@/components/sections/performance-services";
+import { Outcomes } from "@/components/sections/outcomes";
 import { Results } from "@/components/sections/results";
 
 export default function HomePage() {
@@ -7,7 +8,8 @@ export default function HomePage() {
     <>
       <Hero />
       <Results />
-      <PerformanceServices />
+      <Outcomes />
+      <Growth />
     </>
   );
 }
