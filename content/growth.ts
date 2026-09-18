@@ -1,3 +1,9 @@
+export const partners = [
+  { icon: "🇬🇧", label: "UK-Founded" },
+  { icon: "🏆", label: "Google Partner" },
+  { icon: "✅", label: "Meta Partner" },
+] as const;
+
 export const growthFeatures = [
   {
     title: "Data-driven strategy, not opinion",
