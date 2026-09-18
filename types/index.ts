@@ -31,3 +31,12 @@ export type WorkItem = {
   slug: string;
   image: string;
 };
+
+export type Sector = {
+  id: string;
+  label: string;
+  icon: string;
+  title: string;
+  description: string;
+  points: string[];
+};
