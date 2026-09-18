@@ -38,4 +38,5 @@ export type Sector = {
   icon: string;
   title: string;
   description: string;
+  points: string[];
 };

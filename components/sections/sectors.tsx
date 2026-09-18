@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { sectors, sectorHighlights } from "@/content/sectors";
+import { sectors } from "@/content/sectors";
 import { cn } from "@/lib/utils";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -115,7 +115,7 @@ export function Sectors() {
               </div>
 
               <ul className="space-y-3.5">
-                {sectorHighlights.map((item) => (
+                {active.points.map((item) => (
                   <li
                     key={item}
                     className="flex items-start gap-3 text-sm font-medium leading-snug text-black/80 sm:text-[15px]"
