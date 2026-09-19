@@ -18,7 +18,7 @@ export const footerServices = [
 export const footerCompany = [
   { label: "About Us", href: "/about" },
   { label: "Case Studies", href: "/work" },
-  { label: "Insights", href: "/#insights" },
+  { label: "Insights", href: "/insights" },
   { label: "Careers", href: "/#careers" },
   { label: "Contact", href: "/contact" },
 ] as const;
