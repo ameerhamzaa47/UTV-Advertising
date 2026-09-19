@@ -7,7 +7,7 @@ export const siteConfig = {
     { label: "About Us", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Case Studies", href: "/work" },
-    { label: "Insights", href: "/#insights" },
+    { label: "Insights", href: "/insights" },
     { label: "Contact", href: "/contact" },
   ],
 } as const;

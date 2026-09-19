@@ -1,70 +1,69 @@
 "use client";
 
-import Link from "next/link";
+import { useMemo, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowIcon } from "@/components/icons/arrow";
-import { caseStudies } from "@/content/case-studies";
+import { caseStudies, caseStudyFilters } from "@/content/case-studies";
 import { cn } from "@/lib/utils";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-export function Outcomes() {
+export function WorkCases() {
   const reduce = useReducedMotion();
+  const [active, setActive] = useState<(typeof caseStudyFilters)[number]>("ALL");
+
+  const filtered = useMemo(() => {
+    if (active === "ALL") return caseStudies;
+    return caseStudies.filter((study) => study.category === active);
+  }, [active]);
 
   return (
-    <section className="relative overflow-hidden bg-background py-16 md:py-12 lg:py-16">
-      <div className="pointer-events-none absolute -left-24 top-1/3 size-[380px] rounded-full bg-accent/10 blur-[110px]" />
-      <div className="pointer-events-none absolute -right-20 bottom-0 size-[320px] rounded-full bg-accent-end/10 blur-[100px]" />
+    <section className="relative overflow-hidden bg-background pb-16 md:pb-20 lg:pb-24">
+      <div className="pointer-events-none absolute -left-24 top-1/4 size-[380px] rounded-full bg-accent/8 blur-[110px]" />
+      <div className="pointer-events-none absolute -right-20 bottom-0 size-[320px] rounded-full bg-accent-end/8 blur-[100px]" />
 
       <div className="relative mx-auto max-w-7xl px-5 md:px-8 lg:px-16">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <motion.div
-            className="max-w-xl"
-            initial={reduce ? false : { opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.5, ease }}
-          >
-            <p className="inline-flex items-center gap-2 rounded-full border border-card-border bg-secondary/80 px-3.5 py-1 text-[11px] font-semibold tracking-[0.12em] text-muted">
-              <span className="size-1.5 rounded-full bg-accent shadow-[0_0_8px_var(--accent)]" />
-              PROVEN RESULTS
-            </p>
-            <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-[2.75rem]">
-              Outcomes that{" "}
-              <span className="bg-gradient-to-r from-accent to-accent-end bg-clip-text text-transparent">
-                speak
-              </span>{" "}
-              for themselves
-            </h2>
-          </motion.div>
+        <motion.div
+          className="flex flex-wrap gap-2"
+          initial={reduce ? false : { opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, ease }}
+          role="tablist"
+          aria-label="Filter case studies"
+        >
+          {caseStudyFilters.map((filter) => {
+            const isActive = filter === active;
+            return (
+              <button
+                key={filter}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => setActive(filter)}
+                className={cn(
+                  "cursor-pointer rounded-full border px-3.5 py-2 text-xs font-semibold tracking-wide transition-all sm:text-[13px]",
+                  isActive
+                    ? "border-accent/50 bg-accent/10 text-accent shadow-[0_4px_16px_rgba(59,158,255,0.18)]"
+                    : "border-card-border bg-card/40 text-muted hover:border-accent/30 hover:text-accent",
+                )}
+              >
+                {filter === "ALL" ? "All" : filter}
+              </button>
+            );
+          })}
+        </motion.div>
 
-          <motion.div
-            initial={reduce ? false : { opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, ease, delay: 0.1 }}
-          >
-            <Link
-              href="/work"
-              className="group inline-flex shrink-0 items-center gap-2 self-center sm:self-auto rounded-xl w-full md:w-auto border border-card-border bg-card/60 px-4 py-2.5 text-sm font-semibold text-foreground backdrop-blur-sm transition-all hover:border-accent/40 hover:bg-accent/10 justify-center"
-            >
-              Start Your Case Study
-              <ArrowIcon className="size-3.5 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-          </motion.div>
-        </div>
-
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:mt-12 lg:grid-cols-3 lg:gap-6">
-          {caseStudies.slice(0, 3).map((study, i) => {
+        <div className="mt-8 grid gap-5 md:mt-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+          {filtered.map((study, i) => {
             const isGreen = study.tone === "accent-end";
 
             return (
               <motion.article
                 key={study.id}
+                layout
                 initial={reduce ? false : { opacity: 0, y: 22 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.45, ease, delay: i * 0.08 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, ease, delay: i * 0.05 }}
                 whileHover={reduce ? undefined : { y: -5 }}
                 className="group relative flex flex-col overflow-hidden rounded-2xl border border-card-border bg-card p-6 shadow-[0_12px_40px_rgba(0,0,0,0.25)] transition-shadow hover:border-accent/30 hover:shadow-[0_20px_50px_rgba(59,158,255,0.12)] sm:p-7"
               >
@@ -88,7 +87,6 @@ export function Outcomes() {
                   >
                     {study.category}
                   </span>
-             
                   <span className="text-sm text-muted">{study.client}</span>
                 </div>
 
@@ -146,6 +144,12 @@ export function Outcomes() {
             );
           })}
         </div>
+
+        {filtered.length === 0 && (
+          <p className="mt-10 text-center text-sm text-muted">
+            No case studies in this category yet.
+          </p>
+        )}
       </div>
     </section>
   );
