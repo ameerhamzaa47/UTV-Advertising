@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 export default function InsightsPage() {
   return (
     <>
+    {/* hshj */}
       <InsightsHero />
       <InsightsGrid />
     </>
