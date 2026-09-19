@@ -69,7 +69,7 @@ export function Sectors() {
                 whileHover={reduce ? undefined : { y: -2 }}
                 whileTap={reduce ? undefined : { scale: 0.98 }}
                 className={cn(
-                  "relative flex h-full min-h-11 w-full items-center justify-start gap-1.5 rounded-full border px-3 py-2.5 text-left text-[12px] font-semibold leading-tight transition-colors duration-200 sm:gap-2 sm:px-3.5 sm:text-[13px] lg:h-auto lg:w-auto lg:min-h-0 lg:justify-center lg:px-3.5 lg:py-2 lg:text-sm",
+                  "relative flex h-full min-h-11 w-full cursor-pointer items-center justify-start gap-1.5 rounded-full border px-3 py-2.5 text-left text-[12px] font-semibold leading-tight transition-colors duration-200 sm:gap-2 sm:px-3.5 sm:text-[13px] lg:h-auto lg:w-auto lg:min-h-0 lg:justify-center lg:px-3.5 lg:py-2 lg:text-sm",
                   isActive
                     ? "border-accent/50 bg-white text-accent shadow-[0_6px_20px_rgba(59,158,255,0.2)]"
                     : "border-black/8 bg-white/80 text-black/70 hover:border-accent/30 hover:text-accent",

@@ -1,3 +1,4 @@
+import { Clients } from "@/components/sections/clients";
 import { Growth } from "@/components/sections/growth";
 import { Hero } from "@/components/sections/hero";
 import { Outcomes } from "@/components/sections/outcomes";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Growth />
       <Process />
       <Sectors />
+      <Clients />
     </>
   );
 }
