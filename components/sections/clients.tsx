@@ -67,10 +67,11 @@ export function Clients() {
               <div className="mt-6 border-t border-card-border pt-5">
                 <div className="flex items-center gap-3">
                   <span
-                    className="flex size-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-end text-xs font-bold tracking-wide text-white"
+                    className="relative flex size-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-accent via-[#5eb8ff] to-accent-end text-xs font-bold tracking-wide text-white shadow-[0_0_0_2px_rgba(59,158,255,0.25),0_8px_20px_rgba(59,158,255,0.35)] ring-2 ring-white/15"
                     aria-hidden
                   >
-                    {story.initials}
+                    <span className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-b from-white/25 to-transparent" />
+                    <span className="relative">{story.initials}</span>
                   </span>
                   <div>
                     <p className="text-sm font-bold tracking-tight text-foreground">
