@@ -34,7 +34,7 @@ const navIcons: Record<string, ReactNode> = {
       strokeLinejoin="round"
     />
   ),
-  "/#insights": (
+  "/insights": (
     <path
       d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14"
       stroke="currentColor"

@@ -45,4 +45,62 @@ export const caseStudies: CaseStudy[] = [
     tone: "accent",
     slug: "private-medical-group",
   },
+  {
+    id: "real-estate-agency",
+    category: "REAL ESTATE",
+    client: "Regional Property Group",
+    challenge:
+      "High enquiry volume but poor viewing conversion. Budget was spread thin across generic brand and location keywords.",
+    solution:
+      "Restructured search and Meta around high-intent listings, built project-level landing pages, and wired CRM lead scoring.",
+    results: [
+      "+94% Qualified Viewings",
+      "−31% Cost Per Lead",
+      "2.4x Listing Enquiries",
+    ],
+    tone: "accent-end",
+    slug: "regional-property-group",
+  },
+  {
+    id: "hospitality-hotels",
+    category: "HOSPITALITY",
+    client: "Boutique Hotel Collective",
+    challenge:
+      "Heavy OTA dependency and weak direct booking share. Seasonal demand was reactive rather than planned.",
+    solution:
+      "Direct-booking funnel rebuild, seasonal paid strategy, and retargeting journeys tied to stay purpose and ancillary revenue.",
+    results: [
+      "+56% Direct Bookings",
+      "−18% OTA Share",
+      "+£180K Ancillary Revenue",
+    ],
+    tone: "accent",
+    slug: "boutique-hotel-collective",
+  },
+  {
+    id: "professional-services-law",
+    category: "PROFESSIONAL SERVICES",
+    client: "National Law Firm",
+    challenge:
+      "Practice areas competing for the same paid budget. Brand search was strong but new-matter growth was flat.",
+    solution:
+      "Practice-led campaign structure, authority content hubs, and compliant creative with enquiry quality scoring for partners.",
+    results: [
+      "+128% Qualified Enquiries",
+      "−35% Cost Per Matter",
+      "Top 5 Practice Rankings",
+    ],
+    tone: "accent-end",
+    slug: "national-law-firm",
+  },
 ];
+
+export const caseStudyFilters = [
+  "ALL",
+  "E-COMMERCE",
+  "B2B SAAS",
+  "HEALTHCARE",
+  "REAL ESTATE",
+  "HOSPITALITY",
+  "PROFESSIONAL SERVICES",
+] as const;
