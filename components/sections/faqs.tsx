@@ -14,10 +14,10 @@ export function Faqs() {
   const [openId, setOpenId] = useState<string | null>(null);
 
   return (
-    <section className="relative overflow-hidden bg-[#D8D8D8] py-16 md:py-20 lg:py-24">
-      <div className="pointer-events-none absolute -left-24 top-12 size-[400px] rounded-full bg-accent/12 blur-[130px]" />
-      <div className="pointer-events-none absolute -right-16 bottom-0 size-[340px] rounded-full bg-accent-end/12 blur-[120px]" />
-      <div className="pointer-events-none absolute left-1/2 top-1/3 size-[260px] -translate-x-1/2 rounded-full bg-white/35 blur-[90px]" />
+    <section className="relative overflow-hidden border-t border-black/5 bg-[#FAF9F6] py-16 md:py-20 lg:py-24">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+      <div className="pointer-events-none absolute -left-24 top-12 size-[400px] rounded-full bg-accent/10 blur-[130px]" />
+      <div className="pointer-events-none absolute -right-16 bottom-0 size-[340px] rounded-full bg-accent-end/10 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-5 md:px-8 lg:px-16">
         <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14 xl:gap-16">
@@ -26,7 +26,6 @@ export function Faqs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.55, ease }}
-            className="lg:sticky lg:top-28"
           >
             <p className="inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/10 px-3.5 py-1 text-[11px] font-semibold tracking-[0.14em] text-accent shadow-[0_0_24px_rgba(59,158,255,0.14)]">
               <span className="size-1.5 rounded-full bg-accent shadow-[0_0_8px_var(--accent)]" />
