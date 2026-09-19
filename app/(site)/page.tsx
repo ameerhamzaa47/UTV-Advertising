@@ -1,5 +1,6 @@
 import { Clients } from "@/components/sections/clients";
 import { Engineered } from "@/components/sections/engineered";
+import { Faqs } from "@/components/sections/faqs";
 import { Growth } from "@/components/sections/growth";
 import { Hero } from "@/components/sections/hero";
 import { Outcomes } from "@/components/sections/outcomes";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Sectors />
       <Clients />
       <Engineered />
+      <Faqs />
     </>
   );
 }
