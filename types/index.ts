@@ -40,3 +40,12 @@ export type Sector = {
   description: string;
   points: string[];
 };
+
+export type ClientStory = {
+  id: string;
+  quote: string;
+  name: string;
+  role: string;
+  initials: string;
+  rating?: number;
+};
