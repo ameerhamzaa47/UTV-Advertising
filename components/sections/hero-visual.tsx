@@ -111,7 +111,7 @@ export function HeroVisual() {
           >
             <Image
               src="/images/hero/2.png"
-              alt="230+ trusted companies"
+              alt="Campaign performance overview"
               width={271}
               height={403}
               priority
@@ -142,15 +142,6 @@ export function HeroVisual() {
       </motion.div>
 
       <motion.div
-        className="absolute -left-3 top-[18%] z-20 hidden rounded-full border border-white/10 bg-navy/80 px-3 py-1.5 text-xs font-semibold text-foreground shadow-lg backdrop-blur-md sm:block"
-        initial={reduce ? false : { opacity: 0, x: -12 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.7, duration: 0.45 }}
-      >
-        <span className="text-accent-end">+127%</span> avg ROI
-      </motion.div>
-
-      <motion.div
         className="absolute -right-2 bottom-[38%] z-20 flex items-center gap-2 rounded-full border border-white/10 bg-navy/80 px-3 py-1.5 text-xs font-semibold text-foreground shadow-lg backdrop-blur-md"
         initial={reduce ? false : { opacity: 0, x: 12 }}
         animate={{ opacity: 1, x: 0 }}
@@ -160,7 +151,7 @@ export function HeroVisual() {
           <span className="absolute inset-0 animate-ping rounded-full bg-accent-end/70" />
           <span className="relative size-2 rounded-full bg-accent-end" />
         </span>
-        Live campaigns
+        Based in Stoke
       </motion.div>
     </div>
   );

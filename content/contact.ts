@@ -7,7 +7,7 @@ export const contactDetails = [
   },
   {
     label: "Location",
-    value: "London, United Kingdom",
+    value: "Stoke-on-Trent, Staffordshire",
     href: null,
     icon: "pin" as const,
   },

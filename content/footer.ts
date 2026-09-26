@@ -1,35 +1,24 @@
+import { agency, serviceAreas, serviceLinks } from "@/content/agency";
+
 export const footerBrand = {
-  name: "UVT Advertising",
-  description:
-    "A UK performance marketing and SEO agency built around measurable business growth.",
-  email: "uvtadvertising@gmail.com",
-  location: "London, United Kingdom",
+  name: agency.name,
+  description: `${agency.tagline}. ${agency.serving}.`,
+  email: agency.email,
+  location: agency.location,
+  address: agency.address,
+  whatsapp: agency.whatsapp,
+  whatsappHref: agency.whatsappHref,
+  socials: agency.socials,
 } as const;
 
-export const footerServices = [
-  { label: "SEO & AI Search", href: "/services#seo-ai-search" },
-  { label: "Google & Microsoft Ads", href: "/services#google-microsoft-ads" },
-  { label: "Meta Advertising", href: "/services#meta-advertising" },
-  { label: "Social Media", href: "/services#social-media-marketing" },
-  { label: "Web Design & CRO", href: "/services#web-design-cro" },
-  { label: "Strategy & Analytics", href: "/services#strategy-analytics" },
-] as const;
+export const footerServices = serviceLinks;
 
 export const footerCompany = [
   { label: "About Us", href: "/about" },
-  { label: "Case Studies", href: "/work" },
-  { label: "Insights", href: "/insights" },
-  { label: "Careers", href: "/#careers" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
-] as const;
-
-export const footerIndustries = [
-  { label: "E-commerce", href: "/#industries" },
-  { label: "Professional Services", href: "/#industries" },
-  { label: "Healthcare", href: "/#industries" },
-  { label: "Real Estate", href: "/#industries" },
-  { label: "Hospitality", href: "/#industries" },
-  { label: "B2B & SaaS", href: "/#industries" },
+  ...serviceAreas,
 ] as const;
 
 export const footerLegal = [

@@ -1,13 +1,14 @@
 export const siteConfig = {
-  name: "UTV Advertising",
+  name: "UVT Advertising",
   description:
-    "Performance marketing, SEO, paid media and conversion optimization built around measurable business growth.",
-  url: "https://utvadvertising.com",
+    "Affordable digital marketing for Stoke-on-Trent and Staffordshire businesses. Websites, apps, design, SEO, and ads — all under one roof.",
+  url: "https://uvtadvertising.co.uk",
   nav: [
+    { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Case Studies", href: "/work" },
-    { label: "Insights", href: "/insights" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
   ],
 } as const;

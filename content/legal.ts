@@ -20,7 +20,7 @@ export const privacyPolicy: LegalPage = {
     {
       heading: "1. Who we are",
       paragraphs: [
-        "UVT Advertising Ltd is a UK performance marketing and SEO agency. For privacy queries, contact us at uvtadvertising@gmail.com. We are based in London, United Kingdom.",
+        "UVT Advertising is a digital marketing agency based in Stoke-on-Trent, serving businesses across Staffordshire. For privacy queries, contact us at uvtadvertising@gmail.com.",
       ],
     },
     {
@@ -89,7 +89,7 @@ export const termsOfService: LegalPage = {
     {
       heading: "1. About UVT",
       paragraphs: [
-        "UVT Advertising Ltd provides performance marketing, SEO, paid media, and related digital services. Company details and contact: uvtadvertising@gmail.com, London, United Kingdom.",
+        "UVT Advertising provides websites, apps, design, SEO, and paid advertising for businesses in Stoke-on-Trent and across Staffordshire. Contact: uvtadvertising@gmail.com.",
       ],
     },
     {
