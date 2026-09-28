@@ -10,9 +10,9 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "UTV Advertising",
+  title: "UVT Advertising | Digital Marketing in Stoke-on-Trent",
   description:
-    "Performance marketing, SEO, paid media and conversion optimization built around measurable business growth.",
+    "Affordable digital marketing for Stoke-on-Trent and Staffordshire businesses. Websites, apps, design, SEO, Google Ads, Meta Ads, and Microsoft Ads.",
   icons: {
     icon: "/Image/favicon.png",
   },

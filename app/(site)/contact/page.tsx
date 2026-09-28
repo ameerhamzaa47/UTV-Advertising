@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
-import { ContactSection } from "@/components/sections/contact-section";
-import { Faqs } from "@/components/sections/faqs";
+import { ContactPageView } from "@/components/sections/contact-page-view";
 
 export const metadata: Metadata = {
   title: "Contact | UVT Advertising",
   description:
-    "Book a free 45-minute strategy call with UVT Advertising. London-based performance marketing and SEO agency.",
+    "Get a free, no-obligation quote from UVT Advertising in Stoke-on-Trent. We reply within 24 hours.",
 };
 
 export default function ContactPage() {
-  return (
-    <>
-      <ContactSection />
-      <Faqs />
-    </>
-  );
+  return <ContactPageView />;
 }
